@@ -22,10 +22,10 @@ def main():
         result.loc[company, 'Beta to market'] = model.coef_[0]
         result.loc[company, 'Beta to tariffs'] = model.coef_[1]
 
-    # Print top 20 companies with highest beta to tariffs
+    # Print top 10 companies with highest beta to tariffs
     print(result.nlargest(10, 'Beta to tariffs'))
 
-    # Print bottom 20 companies with lowest beta to tariffs
+    # Print bottom 10 companies with lowest beta to tariffs
     print(result.nsmallest(10, 'Beta to tariffs'))
 
 if __name__ == '__main__':
